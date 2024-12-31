@@ -3,7 +3,7 @@ import Login from "./Login";
 import Logout from "./Logout";
 import { useAuth } from "../context/AuthProvider";
 
-export default function Navbar() {
+ function Navbar() {
   const [authUser, setAuthUser] = useAuth();
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
@@ -43,10 +43,10 @@ export default function Navbar() {
         <a href="/course">Course</a>
       </li>
       <li>
-        <a>Contact</a>
+        <a href="/contact">Contact</a>
       </li>
       <li>
-        <a>About</a>
+        <a href="/about">About</a>
       </li>
     </>
   );
@@ -166,3 +166,6 @@ export default function Navbar() {
     </>
   );
 }
+
+
+export default Navbar;
